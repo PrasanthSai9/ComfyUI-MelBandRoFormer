@@ -1,0 +1,15 @@
+[project]
+name = "ComfyUI-MelRoFormer"
+description = "ComfyUI wrapper nodes for WanVideo"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["librosa", "rotary_embedding_torch", "einops"]
+
+[project.urls]
+Repository = "https://github.com/kijai/ComfyUI-MelRoFormer"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "kijai"
+DisplayName = "ComfyUI-MelRoFormer"
+Icon = ""
