@@ -1,114 +1,9 @@
 {
   "id": "8b7a9a57-2303-4ef5-9fc2-bf41713bd1fc",
   "revision": 0,
-  "last_node_id": 324,
-  "last_link_id": 579,
+  "last_node_id": 326,
+  "last_link_id": 584,
   "nodes": [
-    {
-      "id": 318,
-      "type": "MelRoFormerSampler",
-      "pos": [
-        2710.03759765625,
-        -1660.3865966796875
-      ],
-      "size": [
-        240.40696716308594,
-        47.67810821533203
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MELROFORMERMODEL",
-          "link": 566
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": 579
-        }
-      ],
-      "outputs": [
-        {
-          "name": "vocals",
-          "type": "AUDIO",
-          "links": [
-            569
-          ]
-        },
-        {
-          "name": "instruments",
-          "type": "AUDIO",
-          "links": [
-            575
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MelRoFormerSampler"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 319,
-      "type": "PreviewAudio",
-      "pos": [
-        3017.6923828125,
-        -1672.13427734375
-      ],
-      "size": [
-        383.5520935058594,
-        88
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": 569
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.51",
-        "Node name for S&R": "PreviewAudio"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 323,
-      "type": "PreviewAudio",
-      "pos": [
-        3018.808349609375,
-        -1498.72900390625
-      ],
-      "size": [
-        376.83953857421875,
-        91.35621643066406
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": 575
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.51",
-        "Node name for S&R": "PreviewAudio"
-      },
-      "widgets_values": []
-    },
     {
       "id": 317,
       "type": "LoadAudio",
@@ -129,7 +24,7 @@
           "name": "AUDIO",
           "type": "AUDIO",
           "links": [
-            579
+            582
           ]
         }
       ],
@@ -145,15 +40,73 @@
       ]
     },
     {
-      "id": 315,
-      "type": "MelRoFormerModelLoader",
+      "id": 319,
+      "type": "PreviewAudio",
       "pos": [
-        2188.627197265625,
-        -1667.1629638671875
+        2812.40283203125,
+        -1675.490478515625
       ],
       "size": [
-        458.6287536621094,
-        63.593719482421875
+        383.5520935058594,
+        88
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 583
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 323,
+      "type": "PreviewAudio",
+      "pos": [
+        2814.638427734375,
+        -1504.322509765625
+      ],
+      "size": [
+        376.83953857421875,
+        91.35621643066406
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 584
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 325,
+      "type": "MelBandRoFormerModelLoader",
+      "pos": [
+        2141.159423828125,
+        -1714.64501953125
+      ],
+      "size": [
+        419.69976806640625,
+        58
       ],
       "flags": {},
       "order": 1,
@@ -164,49 +117,98 @@
           "name": "model",
           "type": "MELROFORMERMODEL",
           "links": [
-            566
+            581
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "MelRoFormerModelLoader"
+        "aux_id": "kijai/ComfyUI-MelBandRoFormer",
+        "ver": "7b12f8c6105666552ac4e4f08b73e0f96eb05c64",
+        "Node name for S&R": "MelBandRoFormerModelLoader"
       },
       "widgets_values": [
         "MelRoFormer\\MelBandRoformer_fp16.safetensors"
       ]
+    },
+    {
+      "id": 326,
+      "type": "MelBandRoFormerSampler",
+      "pos": [
+        2537.751953125,
+        -1552.427978515625
+      ],
+      "size": [
+        222.73397827148438,
+        46
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MELROFORMERMODEL",
+          "link": 581
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 582
+        }
+      ],
+      "outputs": [
+        {
+          "name": "vocals",
+          "type": "AUDIO",
+          "links": [
+            583,
+            584
+          ]
+        },
+        {
+          "name": "instruments",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "kijai/ComfyUI-MelBandRoFormer",
+        "ver": "7b12f8c6105666552ac4e4f08b73e0f96eb05c64",
+        "Node name for S&R": "MelBandRoFormerSampler"
+      }
     }
   ],
   "links": [
     [
-      566,
-      315,
+      581,
+      325,
       0,
-      318,
+      326,
       0,
       "MELROFORMERMODEL"
     ],
     [
-      569,
-      318,
+      582,
+      317,
+      0,
+      326,
+      1,
+      "AUDIO"
+    ],
+    [
+      583,
+      326,
       0,
       319,
       0,
       "AUDIO"
     ],
     [
-      575,
-      318,
-      1,
+      584,
+      326,
+      0,
       323,
       0,
-      "AUDIO"
-    ],
-    [
-      579,
-      317,
-      0,
-      318,
-      1,
       "AUDIO"
     ]
   ],
