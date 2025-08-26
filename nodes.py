@@ -94,7 +94,10 @@ class MelBandRoFormerSampler:
         sr = 44100
 
         if audio_channels == 1:
-            raise NotImplementedError("Mono input is not supported yet.")
+            # Convert mono to stereo by duplicating the channel
+            audio_input = audio_input.repeat(1, 2, 1)
+            audio_channels = 2
+            print("Converted mono input to stereo.")
 
         if sample_rate != sr:
             print(f"Resampling input {sample_rate} to {sr}")
